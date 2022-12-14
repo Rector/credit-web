@@ -1,0 +1,34 @@
+<h3 style="text-align:center">Credit offer payment schedules information</h3>
+
+<p></p>
+<h5>Credit offer UUID: {{creditOfferInform.uuid}}</h5>
+
+<p></p>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Payment schedule UUID</th>
+        <th scope="col">Payment date</th>
+        <th scope="col">Payment sum</th>
+        <th scope="col">Repayment sum credit body</th>
+        <th scope="col">Repayment sum interest</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr ng-repeat="paymentSchedule in creditOfferInform.paymentScheduleDtoList">
+        <td>{{paymentSchedule.uuid}}</td>
+        <td>{{paymentSchedule.paymentDate}}</td>
+        <td>{{paymentSchedule.paymentSum}}</td>
+        <td>{{paymentSchedule.repaymentSumCreditBody}}</td>
+        <td>{{paymentSchedule.repaymentSumInterest}}</td>
+    </tr>
+    <tr style="font-weight:bold">
+        <td >Total:</td>
+        <td></td>
+        <td>{{creditOfferInform.totalPaymentsSum}}</td>
+        <td>{{creditOfferInform.totalRepaymentsSumCreditBody}}</td>
+        <td>{{creditOfferInform.totalRepaymentsSumInterest}}</td>
+    </tr>
+    </tbody>
+</table>

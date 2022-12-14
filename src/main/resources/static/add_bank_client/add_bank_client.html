@@ -1,0 +1,35 @@
+<h3 style="text-align:center">Add bank client</h3>
+
+<p></p>
+<h5>Bank UUID: {{bankInform.uuid}}</h5>
+
+<div>
+    <button class="btn btn-primary" ng-click="goToBankClientsInfo(bankInform.uuid)">Back to bank clients</button>
+</div>
+
+<p></p>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Client UUID</th>
+        <th scope="col">Full name</th>
+        <th scope="col">Phone number</th>
+        <th scope="col">Email</th>
+        <th scope="col">Passport number</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr ng-repeat="client in currentClientList">
+        <td>{{client.uuid}}</td>
+        <td>{{client.fullName}}</td>
+        <td>{{client.phoneNumber}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.passportNumber}}</td>
+        <td>
+            <button class="btn btn-primary" ng-click="tryToAddBankClient(client.uuid)">Add bank client</button>
+        </td>
+    </tr>
+    </tbody>
+</table>

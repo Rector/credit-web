@@ -1,0 +1,35 @@
+<h3 style="text-align:center">All clients</h3>
+
+<p></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">UUID</th>
+            <th scope="col">Full name</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Passport number</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="client in clientList">
+            <td>{{client.uuid}}</td>
+            <td>{{client.fullName}}</td>
+            <td>{{client.phoneNumber}}</td>
+            <td>{{client.email}}</td>
+            <td>{{client.passportNumber}}</td>
+            <td>
+                <button class="btn btn-outline-primary" ng-click="goToUpdateClientForm(client.uuid)">Update client</button>
+            </td>
+            <td>
+                <button class="btn btn-danger" ng-click="tryToDeleteClient(client.uuid)">Delete client</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <button class="btn btn-primary" ng-click="goToAddClientForm()">Add new client</button>
+</div>

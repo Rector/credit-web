@@ -1,0 +1,62 @@
+<h3 style="text-align:center">Add credit offer form</h3>
+
+<p></p>
+<form ng-submit="tryToAddCreditOffer()">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Client UUID</th>
+            <th scope="col">Full name</th>
+            <th scope="col">Passport number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="client in clientList">
+            <td>{{client.uuid}}</td>
+            <td>{{client.fullName}}</td>
+            <td>{{client.passportNumber}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <p></p>
+
+    <div class="form-group">
+        <label for="inputClient">Client UUID</label>
+        <select class="form-control" id="inputClient" ng-model="addCreditOffer.clientUuid">
+            <option ng-repeat="client in clientList">{{client.uuid}}</option>
+        </select>
+    </div>
+    <p></p>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Credit UUID</th>
+            <th scope="col">Credit limit</th>
+            <th scope="col">Interest rate</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="credit in creditList">
+            <td>{{credit.uuid}}</td>
+            <td>{{credit.creditLimit}}</td>
+            <td>{{credit.interestRate}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <p></p>
+
+    <div class="form-group">
+        <label for="inputCredit">Credit UUID</label>
+        <select class="form-control" id="inputCredit" ng-model="addCreditOffer.creditUuid">
+            <option ng-repeat="credit in creditList">{{credit.uuid}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="inputCreditSum">Credit sum</label>
+        <input class="form-control" id="inputCreditSum" placeholder="Enter credit sum" ng-model="addCreditOffer.creditSum" type="text">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add credit offer</button>
+</form>

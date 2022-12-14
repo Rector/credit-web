@@ -1,0 +1,31 @@
+<h3 style="text-align:center">All banks</h3>
+
+<p></p>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">UUID</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="bank in bankList">
+        <td>{{bank.uuid}}</td>
+        <td>
+            <button class="btn btn-outline-primary" ng-click="goToBankClientsInfo(bank.uuid)">View bank clients</button>
+        </td>
+        <td>
+            <button class="btn btn-outline-primary" ng-click="goToBankCreditsInfo(bank.uuid)">View bank credits</button>
+        </td>
+        <td>
+            <button class="btn btn-danger" ng-click="tryToDeleteBank(bank.uuid)">Delete bank</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <button class="btn btn-primary" ng-click="tryToAddBank()">Add new bank</button>
+</div>

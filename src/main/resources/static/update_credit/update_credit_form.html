@@ -1,0 +1,14 @@
+<h3 style="text-align:center">Update credit form</h3>
+
+<form ng-submit="tryToUpdateCredit()">
+    <div class="form-group">
+        <label for="inputCreditLimit">Credit limit</label>
+        <input class="form-control" id="inputCreditLimit" placeholder="Enter limit" ng-model="updateCredit.creditLimit" type="text">
+    </div>
+    <div class="form-group">
+        <label for="inputInterestRate">Interest rate</label>
+        <input class="form-control" id="inputInterestRate" placeholder="Enter interest rate" ng-model="updateCredit.interestRate" type="text">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update credit</button>
+</form>

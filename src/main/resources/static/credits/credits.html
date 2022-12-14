@@ -1,0 +1,31 @@
+<h3 style="text-align:center">All credits</h3>
+
+<p></p>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">UUID</th>
+        <th scope="col">Credit limit</th>
+        <th scope="col">Interest rate</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="credit in creditList">
+        <td>{{credit.uuid}}</td>
+        <td>{{credit.creditLimit}}</td>
+        <td>{{credit.interestRate}}</td>
+        <td>
+            <button class="btn btn-outline-primary" ng-click="goToUpdateCreditForm(credit.uuid)">Update credit</button>
+        </td>
+        <td>
+            <button class="btn btn-danger" ng-click="tryToDeleteCredit(credit.uuid)">Delete credit</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <button class="btn btn-primary" ng-click="goToAddCreditForm()">Add new credit</button>
+</div>

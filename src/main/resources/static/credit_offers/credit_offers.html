@@ -1,0 +1,39 @@
+<h3 style="text-align:center">All credit offers</h3>
+
+<p></p>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">UUID</th>
+        <th scope="col">Client full name</th>
+        <th scope="col">Client passport number</th>
+        <th scope="col">Interest rate</th>
+        <th scope="col">Credit sum</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="creditOffer in creditOfferList">
+        <td>{{creditOffer.uuid}}</td>
+        <td>{{creditOffer.clientDto.fullName}}</td>
+        <td>{{creditOffer.clientDto.passportNumber}}</td>
+        <td>{{creditOffer.creditDto.interestRate}}</td>
+        <td>{{creditOffer.creditSum}}</td>
+        <td>
+            <button class="btn btn-outline-primary" ng-click="goToCreditOfferPaymentSchedulesInfo(creditOffer.uuid)">View credit offer payment schedules</button>
+        </td>
+        <td>
+            <button class="btn btn-primary" ng-click="goToUpdateUpdateCreditOfferForm(creditOffer.uuid)">Update credit offer</button>
+        </td>
+        <td>
+            <button class="btn btn-danger" ng-click="tryToDeleteCreditOffer(creditOffer.uuid)">Delete credit offer</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <button class="btn btn-primary" ng-click="goToAddCreditOfferForm()">Add new Credit offer</button>
+</div>

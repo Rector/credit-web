@@ -1,0 +1,22 @@
+<h3 style="text-align:center">Add client form</h3>
+
+<form ng-submit="tryToAddClient()">
+    <div class="form-group">
+        <label for="inputFullName">Full name</label>
+        <input class="form-control" id="inputFullName" placeholder="Enter full name" ng-model="addClient.fullName" type="text">
+    </div>
+    <div class="form-group">
+        <label for="inputPhoneNumber">Phone number</label>
+        <input class="form-control" id="inputPhoneNumber" placeholder="Enter phone number" ng-model="addClient.phoneNumber" type="text">
+    </div>
+    <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input class="form-control" id="inputEmail" placeholder="Enter email" ng-model="addClient.email" type="text">
+    </div>
+    <div class="form-group">
+        <label for="inputPassportNumber">Passport number</label>
+        <input class="form-control" id="inputPassportNumber" placeholder="Enter passport number" ng-model="addClient.passportNumber" type="text">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add client</button>
+</form>

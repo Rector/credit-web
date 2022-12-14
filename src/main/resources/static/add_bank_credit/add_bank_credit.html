@@ -1,0 +1,31 @@
+<h3 style="text-align:center">Add bank credit</h3>
+
+<p></p>
+<h5>Bank UUID: {{bankInform.uuid}}</h5>
+
+<div>
+    <button class="btn btn-primary" ng-click="goToBankCreditsInfo(bankInform.uuid)">Back to bank credits</button>
+</div>
+
+<p></p>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Credit UUID</th>
+        <th scope="col">Credit limit</th>
+        <th scope="col">Interest rate</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr ng-repeat="credit in currentCreditList">
+        <td>{{credit.uuid}}</td>
+        <td>{{credit.creditLimit}}</td>
+        <td>{{credit.interestRate}}</td>
+        <td>
+            <button class="btn btn-primary" ng-click="tryToAddBankCredit(credit.uuid)">Add bank credit</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
